@@ -8,6 +8,9 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
+var GameplayManager = require("GameplayManager");
+var Global = require("Global");
+
 var Light = cc.Class({
     extends: cc.Component,
 	
@@ -50,18 +53,18 @@ var Light = cc.Class({
 		this.fire.active = false;
     },
     
-    trigger () {
+    /*trigger () {
     	cc.audioEngine.play (this.sound);
 		this.fireImg.active = true;
 		this.scheduleOnce(function() {cc.log("test"); this.fire.active = false; }, 0.5);
 
-    },
+    },*/
     
     
     fire () {
     	cc.log (this.fireImg);
 		this.fireImg.active = true;
-		//this.scheduleOnce(this.lose, 1);
+		this.scheduleOnce(this.lose, 1);
     },
     
     tap () {
@@ -69,7 +72,8 @@ var Light = cc.Class({
     	{
     		cc.audioEngine.play (this.sound);
     		this.fireImg.active = false;
-    		//this.unschedule (this.lose);
+    		this.unschedule (this.lose);
+    		Global.GameplayManager.increaseScore ();
     	}
     	else
     	{
@@ -79,7 +83,7 @@ var Light = cc.Class({
     },
     
     lose () {
-    	GameplayManager.instance.lose (this);
+    	Global.GameplayManager.lose (this);
     },
 
     // update (dt) {},

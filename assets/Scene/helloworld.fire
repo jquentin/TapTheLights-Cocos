@@ -4261,6 +4261,44 @@
       {
         "__id__": 107
       }
-    ]
+    ],
+    "levels": [
+      {
+        "__id__": 125
+      },
+      {
+        "__id__": 126
+      },
+      {
+        "__id__": 127
+      }
+    ],
+    "currentScore": 0,
+    "currentLevelIndex": 0,
+    "currentIndexInLevel": 0
+  },
+  {
+    "__type__": "DifficultyLevel",
+    "lengthInPoints": 10,
+    "probDouble": 0,
+    "probTriple": 0,
+    "speedMultiplier": 1,
+    "probHalfDelay": 0
+  },
+  {
+    "__type__": "DifficultyLevel",
+    "lengthInPoints": 10,
+    "probDouble": 0,
+    "probTriple": 0,
+    "speedMultiplier": 1,
+    "probHalfDelay": 0.5
+  },
+  {
+    "__type__": "DifficultyLevel",
+    "lengthInPoints": 10,
+    "probDouble": 0.5,
+    "probTriple": 0,
+    "speedMultiplier": 1,
+    "probHalfDelay": 0.5
   }
 ]
