@@ -45,17 +45,17 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1528126647000,
+    "asset": 1528384170000,
     "meta": 1528126647000,
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1528215612000,
-    "meta": 1528215612000,
+    "asset": 1528387311000,
+    "meta": 1528387312000,
     "relativePath": "Scene/helloworld.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1528126647000,
+    "asset": 1528214975000,
     "meta": 1528126647000,
     "relativePath": "Texture"
   },
@@ -75,7 +75,7 @@
     "relativePath": "Texture/HelloWorld.png"
   },
   "15173e12-84ad-4412-9953-b7d353796f55": {
-    "asset": 1528210026000,
+    "asset": 1528210987000,
     "meta": 1528210026000,
     "relativePath": "Audio"
   },
@@ -290,7 +290,7 @@
     "relativePath": "Audio/Marimba/9-g4.wav"
   },
   "c5ccd18a-fb36-4bc6-8e6b-3c700d617f95": {
-    "asset": 1528210060000,
+    "asset": 1528212774000,
     "meta": 1528210060000,
     "relativePath": "Audio/Banjo"
   },
@@ -393,11 +393,6 @@
     "asset": 1528213452000,
     "meta": 1528213452000,
     "relativePath": "Texture/fire.png"
-  },
-  "54a2ce9a-5093-4c28-9630-ee584ad2043b": {
-    "asset": 1528214581000,
-    "meta": 1528214583000,
-    "relativePath": "Script/Light.js"
   },
   "4cd761f9-1906-40b7-8721-e18dabc6a03b": {
     "asset": 1528214975000,
@@ -588,5 +583,25 @@
     "asset": 1527580127000,
     "meta": 1528215734000,
     "relativePath": "prefab/webview.prefab"
+  },
+  "735ba24b-a20e-4e05-840c-fda55c06110c": {
+    "asset": 1528384114000,
+    "meta": 1528384114000,
+    "relativePath": "Script/NewScript.ts"
+  },
+  "e126d650-01e2-4e3c-9e83-3226e67e11c0": {
+    "asset": 1528384170000,
+    "meta": 1528384170000,
+    "relativePath": "Script/NewScript.coffee"
+  },
+  "20f1ee85-b931-4154-94a8-c315cae22db6": {
+    "asset": 1528386954000,
+    "meta": 1528386954000,
+    "relativePath": "Script/GameplayManager.js"
+  },
+  "54a2ce9a-5093-4c28-9630-ee584ad2043b": {
+    "asset": 1528387220000,
+    "meta": 1528387222000,
+    "relativePath": "Script/Light.js"
   }
 }

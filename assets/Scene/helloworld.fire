@@ -15,6 +15,9 @@
     "_children": [
       {
         "__id__": 2
+      },
+      {
+        "__id__": 123
       }
     ],
     "_tag": -1,
@@ -590,7 +593,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 14
@@ -844,7 +847,7 @@
       "__id__": 11
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -855,8 +858,8 @@
       "__id__": 11
     },
     "_enabled": true,
-    "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/1-c3.wav",
-    "fire": {
+    "sound": "/Users/jquentin/Documents/Projects/TapTheLights-Cocos/assets/Audio/Banjo/1-c3.wav",
+    "fireImg": {
       "__id__": 13
     }
   },
@@ -993,7 +996,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 26
@@ -1247,7 +1250,7 @@
       "__id__": 23
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -1258,8 +1261,8 @@
       "__id__": 23
     },
     "_enabled": true,
-    "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/2-d3.wav",
-    "fire": {
+    "sound": "/Users/jquentin/Documents/Projects/TapTheLights-Cocos/assets/Audio/Banjo/2-d3.wav",
+    "fireImg": {
       "__id__": 25
     }
   },
@@ -1396,7 +1399,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 38
@@ -1650,7 +1653,7 @@
       "__id__": 35
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -1661,8 +1664,8 @@
       "__id__": 35
     },
     "_enabled": true,
-    "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/3-e3.wav",
-    "fire": {
+    "sound": "/Users/jquentin/Documents/Projects/TapTheLights-Cocos/assets/Audio/Banjo/3-e3.wav",
+    "fireImg": {
       "__id__": 37
     }
   },
@@ -1799,7 +1802,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 50
@@ -2053,7 +2056,7 @@
       "__id__": 47
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -2065,7 +2068,7 @@
     },
     "_enabled": true,
     "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/4-g3.wav",
-    "fire": {
+    "fireImg": {
       "__id__": 49
     }
   },
@@ -2202,7 +2205,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 62
@@ -2456,7 +2459,7 @@
       "__id__": 59
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -2468,7 +2471,7 @@
     },
     "_enabled": true,
     "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/5-a3.wav",
-    "fire": {
+    "fireImg": {
       "__id__": 61
     }
   },
@@ -2605,7 +2608,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 74
@@ -2859,7 +2862,7 @@
       "__id__": 71
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -2871,7 +2874,7 @@
     },
     "_enabled": true,
     "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/6-c4.wav",
-    "fire": {
+    "fireImg": {
       "__id__": 73
     }
   },
@@ -3008,7 +3011,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 86
@@ -3262,7 +3265,7 @@
       "__id__": 83
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -3273,8 +3276,8 @@
       "__id__": 83
     },
     "_enabled": true,
-    "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/7-d4.wav",
-    "fire": {
+    "sound": null,
+    "fireImg": {
       "__id__": 85
     }
   },
@@ -3411,7 +3414,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 98
@@ -3665,7 +3668,7 @@
       "__id__": 95
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -3677,7 +3680,7 @@
     },
     "_enabled": true,
     "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/8-e4.wav",
-    "fire": {
+    "fireImg": {
       "__id__": 97
     }
   },
@@ -3814,7 +3817,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 110
@@ -4068,7 +4071,7 @@
       "__id__": 107
     },
     "component": "Light",
-    "handler": "trigger",
+    "handler": "tap",
     "customEventData": ""
   },
   {
@@ -4080,7 +4083,7 @@
     },
     "_enabled": true,
     "sound": "/Users/jquentin/Documents/CocosHelloWorld/assets/Audio/Banjo/9-g4.wav",
-    "fire": {
+    "fireImg": {
       "__id__": 109
     }
   },
@@ -4169,5 +4172,95 @@
       "__id__": 9
     },
     "text": "Hello, World!"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "GameplayManager",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 124
+      }
+    ],
+    "_prefab": null,
+    "_id": "1eujRuAcBA54eZESeIcJ4X",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
+    "__type__": "20f1e6FuTFBVJSowxXK4i22",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 123
+    },
+    "_enabled": true,
+    "lights": [
+      {
+        "__id__": 11
+      },
+      {
+        "__id__": 23
+      },
+      {
+        "__id__": 35
+      },
+      {
+        "__id__": 47
+      },
+      {
+        "__id__": 59
+      },
+      {
+        "__id__": 71
+      },
+      {
+        "__id__": 83
+      },
+      {
+        "__id__": 95
+      },
+      {
+        "__id__": 107
+      }
+    ]
   }
 ]

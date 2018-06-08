@@ -8,23 +8,12 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
-var Light = cc.Class({
+var instance = null;
+
+cc.Class({
     extends: cc.Component,
-	
+
     properties: {
-    	sound: 
-    	{
-    		default: null,
-    		type: cc.AudioClip
-    	},
-    	
-    	
-    	fireImg:
-    	{
-			default: null,
-    		type: cc.Node
-    	}
-    	
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -40,6 +29,10 @@ var Light = cc.Class({
         //         this._bar = value;
         //     }
         // },
+         lights: {
+            default: [],
+            type: [cc.Node],
+       },
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -47,40 +40,26 @@ var Light = cc.Class({
     // onLoad () {},
 
     start () {
-		this.fire.active = false;
-    },
-    
-    trigger () {
-    	cc.audioEngine.play (this.sound);
-		this.fireImg.active = true;
-		this.scheduleOnce(function() {cc.log("test"); this.fire.active = false; }, 0.5);
-
-    },
-    
-    
-    fire () {
-    	cc.log (this.fireImg);
-		this.fireImg.active = true;
-		//this.scheduleOnce(this.lose, 1);
-    },
-    
-    tap () {
-    	if (this.fireImg.active)
-    	{
-    		cc.audioEngine.play (this.sound);
-    		this.fireImg.active = false;
-    		//this.unschedule (this.lose);
-    	}
-    	else
-    	{
-	    	this.lose ();
-    	}
-
-    },
-    
-    lose () {
-    	GameplayManager.instance.lose (this);
+    	if (instance == null)
+			instance = this;
+     	
+		this.schedule (this.fireOne, 1);
     },
 
-    // update (dt) {},
+	fireOne () {
+		var lightIndex = Math.floor (Math.random() * 9);
+		cc.log (lightIndex);
+		var lightNode = this.lights[lightIndex];
+		var light = lightNode.getComponent("Light");
+		light.fire ();
+	},
+	
+	lose () {
+		alert ("Loser");
+	},
+	
+     update (dt) {
+     	
+     
+     },
 });
