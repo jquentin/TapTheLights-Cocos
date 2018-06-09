@@ -70,7 +70,7 @@ var Light = cc.Class({
     tap () {
     	if (this.fireImg.active)
     	{
-    		cc.audioEngine.play (this.sound);
+    		//cc.audioEngine.play (this.sound);
     		this.fireImg.active = false;
     		this.unschedule (this.lose);
     		Global.GameplayManager.increaseScore ();

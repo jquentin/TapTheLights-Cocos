@@ -1,13 +1,3 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
 var Global = require("Global");
 
 var DifficultyLevel = cc.Class({
@@ -23,8 +13,6 @@ var DifficultyLevel = cc.Class({
  	   probHalfDelay: 0,
     },
 });
-
-var instance = null;
 
 cc.Class({
     extends: cc.Component,
@@ -59,6 +47,12 @@ cc.Class({
        		type: cc.Integer,
        },
        
+       currentTime: 0,
+       
+       nextFireTime: 0,
+       
+       dead: false,
+       
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -68,10 +62,6 @@ cc.Class({
      },
 
     start () {
-    	if (instance == null)
-			instance = this;
-     	
-		this.scheduleOnce (this.fireOneRound, 1);
     },
     
     increaseScore () {
@@ -87,6 +77,7 @@ cc.Class({
     },
 
 	fireOneRound () {
+		cc.log("fireOneRound");
 		for (i = 0 ; i < this.chooseNextFireAmount () ; i++)
 		{
 			while (true)
@@ -99,7 +90,6 @@ cc.Class({
 			}
 			light.fire ();
 		}
-		this.prepareNextFire ();
 	},
 	
 	chooseNextFireAmount () {
@@ -119,17 +109,25 @@ cc.Class({
 	},
 	
 	prepareNextFire () {
+		cc.log("prepareNextFire");
 		var delay = this.chooseNextFireDelay ();
-		this.scheduleOnce (this.fireOneRound, delay);
+		this.nextFireTime += delay;
 	},
 	
 	lose () {
 		cc.log ("Loser");
-		this.unschedule (this.fireOneRound);
+		this.dead = true;
 	},
 	
      update (dt) {
-     	
+     	if (this.dead)
+     		return;
+     	this.currentTime += dt;
+     	if (this.currentTime >= this.nextFireTime)
+     	{
+     		this.fireOneRound (); 		
+			this.prepareNextFire ();
+     	}
      
      },
 });

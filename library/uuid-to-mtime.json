@@ -45,13 +45,13 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1528384170000,
+    "asset": 1528472248000,
     "meta": 1528126647000,
     "relativePath": "Script"
   },
   "2d2f792f-a40c-49bb-a189-ed176a246e49": {
-    "asset": 1528472675000,
-    "meta": 1528472675000,
+    "asset": 1528517081000,
+    "meta": 1528517081000,
     "relativePath": "Scene/helloworld.fire"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
@@ -584,29 +584,29 @@
     "meta": 1528215734000,
     "relativePath": "prefab/webview.prefab"
   },
-  "735ba24b-a20e-4e05-840c-fda55c06110c": {
-    "asset": 1528384114000,
-    "meta": 1528384114000,
-    "relativePath": "Script/NewScript.ts"
-  },
-  "e126d650-01e2-4e3c-9e83-3226e67e11c0": {
-    "asset": 1528384170000,
-    "meta": 1528384170000,
-    "relativePath": "Script/NewScript.coffee"
-  },
   "cbbad8c7-1f6a-4fd3-a32c-f13d680d5539": {
     "asset": 1528472281000,
     "meta": 1528472371000,
     "relativePath": "Script/Global.js"
   },
   "54a2ce9a-5093-4c28-9630-ee584ad2043b": {
-    "asset": 1528472525000,
-    "meta": 1528472526000,
+    "asset": 1528480005000,
+    "meta": 1528480007000,
     "relativePath": "Script/Light.js"
   },
+  "466ae258-23a1-419e-a106-35d2311a75da": {
+    "asset": 1528482403000,
+    "meta": 1528516181000,
+    "relativePath": "Script/TestScheduleRecursive.js"
+  },
   "20f1ee85-b931-4154-94a8-c315cae22db6": {
-    "asset": 1528472595000,
-    "meta": 1528472596000,
+    "asset": 1528516598000,
+    "meta": 1528516601000,
     "relativePath": "Script/GameplayManager.js"
+  },
+  "b8a8dd71-3872-4156-8c6d-90811b62bcb4": {
+    "asset": 1528517064000,
+    "meta": 1528517066000,
+    "relativePath": "Script/ScoreLabel.js"
   }
 }

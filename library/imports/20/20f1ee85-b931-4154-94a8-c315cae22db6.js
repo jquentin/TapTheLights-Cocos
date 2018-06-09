@@ -4,16 +4,6 @@ cc._RF.push(module, '20f1e6FuTFBVJSowxXK4i22', 'GameplayManager');
 
 "use strict";
 
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
 var Global = require("Global");
 
 var DifficultyLevel = cc.Class({
@@ -29,8 +19,6 @@ var DifficultyLevel = cc.Class({
     probHalfDelay: 0
   }
 });
-
-var instance = null;
 
 cc.Class({
   extends: cc.Component,
@@ -63,7 +51,13 @@ cc.Class({
     currentIndexInLevel: {
       default: 0,
       type: cc.Integer
-    }
+    },
+
+    currentTime: 0,
+
+    nextFireTime: 0,
+
+    dead: false
 
   },
 
@@ -72,11 +66,7 @@ cc.Class({
   onLoad: function onLoad() {
     Global.GameplayManager = this;
   },
-  start: function start() {
-    if (instance == null) instance = this;
-
-    this.scheduleOnce(this.fireOneRound, 1);
-  },
+  start: function start() {},
   increaseScore: function increaseScore() {
     this.currentScore++;
     cc.log("increaseScore: " + this.currentScore);
@@ -88,6 +78,7 @@ cc.Class({
     }
   },
   fireOneRound: function fireOneRound() {
+    cc.log("fireOneRound");
     for (i = 0; i < this.chooseNextFireAmount(); i++) {
       while (true) {
         var lightIndex = Math.floor(Math.random() * 9);
@@ -97,7 +88,6 @@ cc.Class({
       }
       light.fire();
     }
-    this.prepareNextFire();
   },
   chooseNextFireAmount: function chooseNextFireAmount() {
     if (Math.random() <= this.currentLevel.probTriple) return 3;else if (Math.random() <= this.currentLevel.probTriple + this.currentLevel.probDouble) return 2;else return 1;
@@ -106,14 +96,22 @@ cc.Class({
     if (Math.random() <= this.currentLevel.probHalfDelay) return 0.5;else return 1;
   },
   prepareNextFire: function prepareNextFire() {
+    cc.log("prepareNextFire");
     var delay = this.chooseNextFireDelay();
-    this.scheduleOnce(this.fireOneRound, delay);
+    this.nextFireTime += delay;
   },
   lose: function lose() {
     cc.log("Loser");
-    this.unschedule(this.fireOneRound);
+    this.dead = true;
   },
-  update: function update(dt) {}
+  update: function update(dt) {
+    if (this.dead) return;
+    this.currentTime += dt;
+    if (this.currentTime >= this.nextFireTime) {
+      this.fireOneRound();
+      this.prepareNextFire();
+    }
+  }
 });
 
 cc._RF.pop();
