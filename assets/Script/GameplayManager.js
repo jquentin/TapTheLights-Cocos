@@ -1,5 +1,8 @@
 var Global = require("Global");
 var Light = require("Light");
+var GameOverScreen = require("GameOverScreen");
+var MusicManager = require("MusicManager");
+var ColorManager = require("ColorManager");
 
 var DifficultyLevel = cc.Class({
 	name: "DifficultyLevel",
@@ -26,7 +29,11 @@ cc.Class({
          },
        lights: {
             default: [],
-            type: [cc.Node],
+            type: [Light],
+       },
+       background: {
+            default: null,
+            type: cc.Node,
        },
        levels: {
             default: [],
@@ -52,7 +59,12 @@ cc.Class({
        
        nextFireTime: 0,
        
-       dead: false,
+       
+       dead: {
+       		default: true,
+       		type: cc.Boolean,
+       		serializable: false,
+       },
        
     },
 
@@ -63,6 +75,26 @@ cc.Class({
      },
 
     start () {
+	    this.resetGame ();
+	    this.startGame ();
+    },
+    
+    resetGame () {
+		for (i = 0 ; i < this.lights.length ; i++)
+		{
+			this.lights[i].reset ();
+		}
+	    this.currentScore = 0;
+	    this.currentLevelIndex = 0;
+	    this.currentIndexInLevel = 0;
+	    Global.MusicManager.loadRandomInstrument ();
+	    Global.ColorManager.loadRandomPalette ();
+    },
+
+    startGame () {
+	    this.currentTime = 0;
+	    this.nextFireTime = 1;
+	    this.dead = false;
     },
     
     increaseScore () {
@@ -85,12 +117,7 @@ cc.Class({
 			while (!found)
 			{
 				var lightIndex = Math.floor (Math.random() * 9);
-				cc.log ("lightIndex = " + lightIndex);
-				var lightNode = this.lights[lightIndex];
-				cc.log ("lightNode = " + lightNode);
-				var light = lightNode.getComponent(Light);
-				cc.log ("light = " + light);
-				cc.log ("light.fireImg.active = " + light.fireImg.active);
+				var light = this.lights[lightIndex];
 				if (!light.fireImg.active)
 					found = true;
 			}
@@ -123,6 +150,7 @@ cc.Class({
 	lose () {
 		cc.log ("Loser");
 		this.dead = true;
+		Global.GameOverScreen.open ();
 	},
 	
      update (dt) {

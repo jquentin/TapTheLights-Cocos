@@ -1,3 +1,6 @@
+var GameplayManager = require("GameplayManager");
+var Global = require("Global");
+
 var ColorPalette = cc.Class({
 
 	name: "ColorPalette",
@@ -32,10 +35,22 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad () {
+     	Global.ColorManager = this;
+    },
 
-    start () {
+    loadPalette (index) {
+    	Global.GameplayManager.background.color = this.colorPalettes[index].bgColor;
+    	for (i = 0 ; i < Global.GameplayManager.lights.length ; i++)
+    	{
+    		var chosenColor = Math.floor (Math.random () * this.colorPalettes[index].padColors.length);
+    		Global.GameplayManager.lights[i].node.color = this.colorPalettes[index].padColors[chosenColor];
+    	}
+    },
 
+    loadRandomPalette () {
+    	var chosenPalette = Math.floor (Math.random () * this.colorPalettes.length);
+    	this.loadPalette (chosenPalette);
     },
 
     // update (dt) {},
