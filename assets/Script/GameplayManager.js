@@ -1,4 +1,5 @@
 var Global = require("Global");
+var Light = require("Light");
 
 var DifficultyLevel = cc.Class({
 	name: "DifficultyLevel",
@@ -80,13 +81,18 @@ cc.Class({
 		cc.log("fireOneRound");
 		for (i = 0 ; i < this.chooseNextFireAmount () ; i++)
 		{
-			while (true)
+			var found = false;
+			while (!found)
 			{
 				var lightIndex = Math.floor (Math.random() * 9);
+				cc.log ("lightIndex = " + lightIndex);
 				var lightNode = this.lights[lightIndex];
-				var light = lightNode.getComponent("Light");
+				cc.log ("lightNode = " + lightNode);
+				var light = lightNode.getComponent(Light);
+				cc.log ("light = " + light);
+				cc.log ("light.fireImg.active = " + light.fireImg.active);
 				if (!light.fireImg.active)
-					break;
+					found = true;
 			}
 			light.fire ();
 		}
