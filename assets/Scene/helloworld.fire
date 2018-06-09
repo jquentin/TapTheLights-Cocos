@@ -891,9 +891,6 @@
       "__id__": 11
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "f41c1f96-2140-457e-8076-7ef66654674f"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -1313,9 +1310,6 @@
       "__id__": 24
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "478d31b6-d48e-4cb9-a54c-a5d43ee39be7"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -1735,9 +1729,6 @@
       "__id__": 37
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "3d331549-d4f2-467b-8223-9ecb226b990e"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -2157,9 +2148,6 @@
       "__id__": 50
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "1f026760-93f1-4ac0-8870-bd133ff537a3"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -2579,9 +2567,6 @@
       "__id__": 63
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "4cd083a7-ca89-4349-bb2b-c048de9ab2cf"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -3001,9 +2986,6 @@
       "__id__": 76
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "65f0037a-f7b4-4ed9-8a22-8edddc6b5358"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -3423,9 +3405,6 @@
       "__id__": 89
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "7d92e95d-897a-41b7-9cbb-273350b65753"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -3845,9 +3824,6 @@
       "__id__": 102
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "cf30ae7e-210d-4d89-86fb-248612f6e926"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
@@ -4267,9 +4243,6 @@
       "__id__": 115
     },
     "_enabled": true,
-    "_clip": {
-      "__uuid__": "f43f8f25-01e0-49f6-97a3-702fd09f233a"
-    },
     "_volume": 1,
     "_mute": false,
     "_loop": false,
