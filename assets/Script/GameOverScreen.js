@@ -30,6 +30,17 @@ cc.Class({
 		this.scoreLbl.string = Global.GameplayManager.currentScore;
 		this.node.runAction (cc.sequence (cc.fadeIn (1), cc.callFunc (this.waitForTap, this)));
 		this.isOpen = true;
+		
+		/*wx.getFriendUserGameData({
+			keyList:["score"],
+			success:res=> {
+				//let data = res.data
+				console.log("getFriendUserGameData:",res);
+			},
+			fail:res=>{
+				console.log("getFriendUserGameData fail:",res);
+			}
+		});*/
     },
     
     waitForTap () {

@@ -20,6 +20,7 @@ var Light = cc.Class({
 
     start () {
 		this.fire.active = false;
+     	this.node.on (cc.Node.EventType.TOUCH_START, this.tap, this);
     },
     
     
@@ -31,6 +32,7 @@ var Light = cc.Class({
     tap () {
     	if (this.fireImg.active)
     	{
+	   		//wx.vibrateShort();
     		this.getComponent (cc.AudioSource).play ();
     		this.fireImg.active = false;
     		this.unschedule (this.lose);
@@ -46,6 +48,7 @@ var Light = cc.Class({
     lose () {
 	    if (!Global.GameplayManager.dead)
 	    {
+		    //wx.vibrateLong();
     		Global.GameplayManager.lose (this);
     		this.shake ();
     	}

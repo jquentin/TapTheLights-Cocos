@@ -29,7 +29,12 @@ cc.Class({
          },
        lights: {
             default: [],
-            type: [Light],
+            type: [Light], 
+       		serializable: false,
+       },
+       lightsContainer: {
+            default: null,
+            type: cc.Node,
        },
        background: {
             default: null,
@@ -71,7 +76,8 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
      onLoad () {
-     	Global.GameplayManager = this;
+     	Global.GameplayManager = this; 
+     	this.lights = this.lightsContainer.getComponentsInChildren(Light);
      },
 
     start () {
